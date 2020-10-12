@@ -41,8 +41,8 @@ jobs:
         run: bin/test
 
       # report to CC
-      - run: ./cc-test-reporter after-build --exit-code 1
+      - run: ./cc-test-reporter after-build --exit-code 1 --debug
         if: ${{ failure() }}
 
-      - run: ./cc-test-reporter after-build --exit-code 0
+      - run: ./cc-test-reporter after-build --exit-code 0 --debug
         if: ${{ success() }}
