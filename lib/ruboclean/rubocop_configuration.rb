@@ -7,6 +7,10 @@ module Ruboclean
       @config_hash = config_hash
     end
 
+    def to_h
+      @config_hash
+    end
+
     def order
       Ruboclean::Orderer.new(@config_hash).order
     end
